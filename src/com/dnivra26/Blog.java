@@ -14,34 +14,18 @@ public class Blog {
         return author;
     }
 
-}
-
-interface Printer {
-    public void print(Blog blog);
-}
-
-class CLIPrinter implements Printer {
-
-    @Override
-    public void print(Blog blog) {
-        System.out.println(blog.getAuthor() + "-" + blog.getTitle());
+    public void printBlog() {
+        System.out.println("prints blog");
     }
-}
 
-interface Persist {
-    public void save(Blog blog);
-}
-
-class FilePersist implements Persist {
-
-    @Override
-    public void save(Blog blog) {
+    public void persist() {
         try {
-            FileWriter fw = new FileWriter(blog.getTitle() + "-" + blog.getAuthor() + ".txt");
-            fw.write(blog.getTitle() + "-" + blog.getAuthor());
+            FileWriter fw = new FileWriter(getTitle() + "-" + getAuthor() + ".txt");
+            fw.write(getTitle() + "-" + getAuthor());
             fw.close();
         } catch (Exception e) {
             System.out.println(e);
         }
+
     }
 }
