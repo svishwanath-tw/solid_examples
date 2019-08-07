@@ -1,25 +1,25 @@
 package com.dnivra26;
 
-interface Time {
+public interface Clock {
     public void setTime();
-
     public int getTime();
-}
-
-interface Alarm {
     public void setAlarm();
-
     public void getAlarm();
-}
-
-interface Radio {
     public void setRadio();
-
     public void getRadio();
 }
 
-class AlarmClock implements Alarm {
+class AlarmClock implements Clock{
 
+    @Override
+    public void setTime() {
+        // does not apply
+    }
+
+    @Override
+    public int getTime() {
+        return 0;
+    }
 
     @Override
     public void setAlarm() {
@@ -31,4 +31,13 @@ class AlarmClock implements Alarm {
         // return alarm
     }
 
+    @Override
+    public void setRadio() {
+        // does not apply
+    }
+
+    @Override
+    public void getRadio() {
+        // does not apply
+    }
 }
