@@ -1,10 +1,10 @@
 package com.dnivra26;
 
-public class Rectangle {
+public class L_Rectangle {
     int width;
     int height;
 
-    public Rectangle(int width, int height) {
+    public L_Rectangle(int width, int height) {
         this.width = width;
         this.height = height;
     }
@@ -22,19 +22,19 @@ public class Rectangle {
     }
 
     public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle(5, 6);
+        L_Rectangle rectangle = new L_Rectangle(5, 6);
         System.out.println(rectangle.getArea());
         Square square = new Square(4);
         square.setHeight(5);
         System.out.println(square.getArea());
 
-        Rectangle re = new Square(4);
+        L_Rectangle re = new Square(4);
         re.setWidth(4);
         re.setHeight(5);
     }
 }
 
-class Square extends Rectangle {
+class Square extends L_Rectangle {
 
     public Square(int side) {
         super(side, side);

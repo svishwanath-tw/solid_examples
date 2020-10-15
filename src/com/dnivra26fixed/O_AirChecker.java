@@ -1,5 +1,4 @@
-
-package com.dnivra26;
+package com.dnivra26fixed;
 
 abstract class Vehicle {
     abstract public int findAir();
@@ -58,14 +57,14 @@ class Bike extends Vehicle {
 }
 
 
-public class AirChecker {
+public class O_AirChecker {
 
     public int findAirLeft(Vehicle vehicle) {
         return vehicle.findAir();
     }
 
     public static void main(String[] args) {
-        AirChecker airChecker = new AirChecker();
+        O_AirChecker airChecker = new O_AirChecker();
         Vehicle auto = new Auto(1, 2, 3);
         Vehicle bike = new Bike(1, 2);
         System.out.println(airChecker.findAirLeft(auto));

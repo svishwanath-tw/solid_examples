@@ -3,7 +3,7 @@ package com.dnivra26;
 import java.io.FileWriter;
 import java.util.Stack;
 
-public class Book {
+public class D_Book {
     public String getTitle() {
         return "A Great Book";
     }

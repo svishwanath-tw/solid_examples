@@ -1,5 +1,4 @@
-
-package com.dnivra26;
+package com.dnivra26fixed;
 
 interface Time {
     public void setTime();

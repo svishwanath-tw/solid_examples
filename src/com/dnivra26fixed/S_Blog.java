@@ -1,6 +1,8 @@
+package com.dnivra26fixed;
+
 import java.io.FileWriter;
 
-public class Blog {
+public class S_Blog {
     String title = "Microservices";
     String author = "Feynmann";
 
@@ -15,25 +17,25 @@ public class Blog {
 }
 
 interface Printer {
-    public void print(Blog blog);
+    public void print(S_Blog Blog);
 }
 
 class CLIPrinter implements Printer {
 
     @Override
-    public void print(Blog blog) {
+    public void print(S_Blog blog) {
         System.out.println(blog.getAuthor() + "-" + blog.getTitle());
     }
 }
 
 interface Persist {
-    public void save(Blog blog);
+    public void save(S_Blog blog);
 }
 
-class FilePersist implements Persist {
+class BFilePersist implements Persist {
 
     @Override
-    public void save(Blog blog) {
+    public void save(S_Blog blog) {
         try {
             FileWriter fw = new FileWriter(blog.getTitle() + "-" + blog.getAuthor() + ".txt");
             fw.write(blog.getTitle() + "-" + blog.getAuthor());

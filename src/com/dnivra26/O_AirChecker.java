@@ -45,7 +45,7 @@ class Bike {
 }
 
 
-public class L_AirChecker {
+public class O_AirChecker {
 
     public int findAirLeft(Object vehicle) {
         if (vehicle.getClass() == Auto.class) {
@@ -56,7 +56,7 @@ public class L_AirChecker {
     }
 
     public static void main(String[] args) {
-        AirChecker airChecker = new AirChecker();
+        O_AirChecker airChecker = new O_AirChecker();
         Auto auto = new Auto(1, 2, 3);
         Bike bike = new Bike(1, 2);
         System.out.println(airChecker.findAirLeft(auto));

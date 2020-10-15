@@ -9,7 +9,7 @@ public interface I_Clock {
     public void getRadio();
 }
 
-class AlarmClock implements Clock{
+class AlarmClock implements I_Clock{
 
     @Override
     public void setTime() {

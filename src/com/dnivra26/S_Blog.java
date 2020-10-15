@@ -2,7 +2,7 @@ package com.dnivra26;
 
 import java.io.FileWriter;
 
-public class Blog {
+public class S_Blog {
     String title = "Microservices";
     String author = "Feynmann";
 
