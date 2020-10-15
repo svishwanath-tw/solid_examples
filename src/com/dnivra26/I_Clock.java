@@ -1,6 +1,6 @@
 package com.dnivra26;
 
-public interface Clock {
+public interface I_Clock {
     public void setTime();
     public int getTime();
     public void setAlarm();

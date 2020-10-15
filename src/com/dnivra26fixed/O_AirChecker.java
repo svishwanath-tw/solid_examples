@@ -1,6 +1,11 @@
+
 package com.dnivra26;
 
-class Auto {
+abstract class Vehicle {
+    abstract public int findAir();
+}
+
+class Auto extends Vehicle {
 
     public int getFrontTyreAir() {
         return frontTyreAir;
@@ -23,9 +28,13 @@ class Auto {
 
     private int frontTyreAir, backLeftTyreAir, backRightTyreAir;
 
+    @Override
+    public int findAir() {
+        return frontTyreAir + backLeftTyreAir + backRightTyreAir;
+    }
 }
 
-class Bike {
+class Bike extends Vehicle {
 
     public int getFrontTyreAir() {
         return frontTyreAir;
@@ -42,23 +51,23 @@ class Bike {
 
     private int frontTyreAir, backTyreAir;
 
+    @Override
+    public int findAir() {
+        return frontTyreAir + backTyreAir;
+    }
 }
 
 
 public class AirChecker {
 
-    public int findAirLeft(Object vehicle) {
-        if (vehicle.getClass() == Auto.class) {
-            return ((Auto) vehicle).getBackLeftTyreAir() + ((Auto) vehicle).getBackRightTyreAir() + ((Auto) vehicle).getFrontTyreAir();
-        } else {
-            return ((Bike) vehicle).getBackTyreAir() + ((Bike) vehicle).getFrontTyreAir();
-        }
+    public int findAirLeft(Vehicle vehicle) {
+        return vehicle.findAir();
     }
 
     public static void main(String[] args) {
         AirChecker airChecker = new AirChecker();
-        Auto auto = new Auto(1, 2, 3);
-        Bike bike = new Bike(1, 2);
+        Vehicle auto = new Auto(1, 2, 3);
+        Vehicle bike = new Bike(1, 2);
         System.out.println(airChecker.findAirLeft(auto));
         System.out.println(airChecker.findAirLeft(bike));
     }

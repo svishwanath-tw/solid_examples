@@ -31,11 +31,7 @@ public class Rectangle {
         Rectangle re = new Square(4);
         re.setWidth(4);
         re.setHeight(5);
-        //assert this to be 20
-
     }
-
-
 }
 
 class Square extends Rectangle {
@@ -56,6 +52,3 @@ class Square extends Rectangle {
         this.width = height;
     }
 }
-
-
-
